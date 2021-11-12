@@ -26,3 +26,7 @@ cv2.waitKey(0)
 blur_img = cv2.GaussianBlur(noised_img,(5,5),0)
 cv2.imshow('blur_img', blur_img)
 cv2.waitKey(0)
+
+blur_img = cv2.medianBlur(img,3)
+cv2.imshow('blur_img', blur_img)
+cv2.waitKey(0)
