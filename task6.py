@@ -20,13 +20,9 @@ def get_noised_img(img, delta):
 
 img = cv2.imread('fixtures/task6/img6.png')
 noised_img = get_noised_img(img, 10000)
-while True:
-    cv2.imshow('noise_img', noised_img)
-    if cv2.waitKey(1) & 0xff == ord('q'):
-        break
+cv2.imshow('noise_img', noised_img)
+cv2.waitKey(0)
 
 blur_img = cv2.GaussianBlur(noised_img,(5,5),0)
-while True:
-    cv2.imshow('blur_img', blur_img)
-    if cv2.waitKey(1) & 0xff == ord('q'):
-        break
+cv2.imshow('blur_img', blur_img)
+cv2.waitKey(0)
